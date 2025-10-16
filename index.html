@@ -156,7 +156,7 @@
             <!-- Mockup Celulares -->
             <div class="mockup-container w-[200px] h-[240px]">
                 <div class="phone-mockup phone-1"><div class="phone-screen"><img src="https://i.imgur.com/8BpUGAA.jpeg" alt="Exemplo de figurinha no celular"></div></div>
-                <div class="phone-mockup phone-2"><div class="phone-screen"><img src="https://i.imgur.com/MxgScBQ.jpeg" alt="Exemplo de figurinha no celular"></div></div>
+                <div class="phone-mockup phone-2"><div class="phone-screen"><img src="https://i.imgur.com/Ext3yXR.png" alt="Exemplo de figurinha no celular"></div></div>
             </div>
 
             <!-- Conteúdo do Topo -->
@@ -252,7 +252,7 @@
         let currentNameIndex = 0;
         function showNotification() {
             const popup = document.getElementById('notification-popup');
-            popup.innerHTML = `<strong>${names[currentNameIndex]}</strong> acabou de comprar o pack!`;
+            popup.innerHTML = `<strong>${names[currentNameIndex]}</strong> acabou de entrar no grupo!`;
             popup.classList.add('show');
             currentNameIndex = (currentNameIndex + 1) % names.length;
             setTimeout(() => { popup.classList.remove('show'); }, 4000);
