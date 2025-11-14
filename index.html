@@ -1,4 +1,225 @@
-<section id="bonus" class="bg-primary-light py-12 md:py-16">
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pack de Figurinhas e Artes - por Beatriz Lira</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://i.imgur.com/RZR1gMI.png" type="image/png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fonte Alterada para Raleway -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            /* Fonte Alterada para Raleway */
+            font-family: 'Raleway', sans-serif;
+            background-color: #fBfBfB; /* Fundo branco/neutro muito leve */
+            color: #333;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        /* --- CORREÇÃO RESPONSIVA --- */
+        html, body {
+            width: 100%;
+            overflow-x: hidden;
+        }
+        /* --- FIM DA CORREÇÃO --- */
+        
+        :root {
+            --color-primary: #0D9488; /* Teal (Azul-Petróleo) */
+            --color-primary-light: #F0FDFA; /* Teal (Fundo) */
+            --color-secondary: #F97316; /* Coral/Laranja (CTA) */
+            --color-text-dark: #1E293B; /* Cinza Escuro (Texto) */
+            --color-text-light: #475569; /* Cinza (Texto Secundário) */
+            --color-telegram: #2AABEE; /* Azul Telegram */
+        }
+
+        .text-primary { color: var(--color-primary); }
+        .bg-primary-light { background-color: var(--color-primary-light); }
+        .border-primary { border-color: var(--color-primary); }
+        .text-telegram { color: var(--color-telegram); }
+        
+        .btn-cta {
+            background-color: var(--color-secondary);
+            color: white;
+            font-weight: 700;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 14px 0 rgba(249, 115, 22, 0.3);
+        }
+        .btn-cta:hover {
+            background-color: #FB923C; /* Laranja mais claro no hover */
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px 0 rgba(249, 115, 22, 0.4);
+        }
+
+        /* --- CSS DO CARROSSEL AUTOMÁTICO (Tema Light) --- */
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            /* Efeito de fade nas bordas */
+            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+        .carousel-track {
+            display: flex;
+            gap: 1rem; /* 16px */
+            /* (Largura do Item (180px) + gap (1rem)) * 6 itens (3 originais * 2 duplicados) */
+            width: calc((180px + 1rem) * 6);
+        }
+        .carousel-item {
+            flex-shrink: 0;
+            width: 180px; /* Largura fixa para cada imagem */
+            height: auto;
+            border-radius: 0.75rem; /* rounded-xl */
+            /* Sombra suave para o tema light */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08); 
+            border: 1px solid #eee;
+            overflow: hidden;
+        }
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Animação: Esquerda */
+        @keyframes scroll-left {
+            from { transform: translateX(0); }
+            /* Move o total de 3 imagens (originais) */
+            to { transform: translateX(calc(-1 * (180px + 1rem) * 3)); }
+        }
+        .scroll-left {
+            animation: scroll-left 30s linear infinite;
+        }
+
+        /* Animação: Direita */
+        @keyframes scroll-right {
+            /* Começa da posição final e volta ao início */
+            from { transform: translateX(calc(-1 * (180px + 1rem) * 3)); }
+            to { transform: translateX(0); }
+        }
+        .scroll-right {
+            animation: scroll-right 30s linear infinite;
+        }
+
+        /* Pausa a animação ao passar o mouse */
+        .carousel-track:hover {
+            animation-play-state: paused;
+        }
+        /* --- FIM DO CSS DO CARROSSEL --- */
+
+    </style>
+</head>
+<body class="bg-white">
+
+    <!-- 1. HEADER (Cabeçalho com Navegação) REMOVIDO -->
+
+    <main>
+
+        <!-- 2. HERO SECTION (Headline + Imagem) -->
+        <section id="home" class="container mx-auto px-6 pt-16 pb-12 md:pt-24 md:pb-16">
+            <!-- Layout alterado para 1 coluna, já que a imagem foi removida -->
+            <div class="grid md:grid-cols-1 gap-12 items-center">
+                <!-- Coluna de Texto (agora centralizada) -->
+                <div class="text-center">
+                    
+                    <!-- LOGO ADICIONADA -->
+                    <img src="https://i.imgur.com/xkbXLug.png" alt="Logo Insta Criativo Pack" class="w-56 mx-auto mb-8">
+
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-text-dark leading-tight">
+                        Crie Stories Incríveis <span class="text-primary">Todos os Dias</span>
+                    </h1>
+                    <!-- Botão "Ver Oferta Especial" REMOVIDO -->
+                </div>
+                <!-- Coluna da Imagem (REMOVIDA) -->
+            </div>
+        </section>
+
+        <!-- 3. OFFER BANNER (Preço e Desconto) -->
+        <section id="oferta" class="bg-primary-light py-12 md:py-16">
+            <div class="container mx-auto px-6 text-center">
+                <div class="inline-block bg-red-500 text-white text-sm font-bold px-4 py-1 rounded-full uppercase mb-4 shadow-lg">
+                    57% OFF - OFERTA LIMITADA
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-text-dark mb-4">
+                    Acesso Vitalício por Apenas:
+                </h2>
+                <div class="text-4xl md:text-6xl font-extrabold flex items-baseline justify-center gap-4">
+                    <span class="text-gray-400 line-through text-2xl md:text-4xl">R$47,00</span>
+                    <span class="text-primary">R$19,97</span>
+                </div>
+                <p class="mt-4 text-text-light text-lg">Pagamento único, sem mensalidades.</p>
+                
+                <!-- BOTÃO ADICIONADO -->
+                <a href="https://www.ggcheckout.com/checkout/v2/Z3VzGlDvIPiJP30xwlyb" class="btn-cta inline-flex items-center px-12 py-4 text-xl rounded-lg mt-8">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 inline-block mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    Quero Meu Acesso Vitalício
+                </a>
+                <!-- Info Telegram -->
+                <p class="flex items-center justify-center gap-2 mt-3 font-semibold text-telegram">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M9.78 18.65l.28-4.23l7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3L3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.57c-.28 1.13-1.04 1.4-1.74 .88l-4.98-3.9z"></path></svg>
+                    Grupo Via TELEGRAM
+                </p>
+
+                <div class="mt-8 flex flex-col md:flex-row justify-center items-center gap-6 text-text-dark">
+                    <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>Checkout 100% Seguro</div>
+                    <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>Acesso Imediato</div>
+                    <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>Direitos Vitalícios</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. KEY BENEFITS (O que você recebe) -->
+        <section class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-text-dark mb-12">
+                    O que está incluído no seu acesso:
+                </h2>
+                <!-- Layout da grelha atualizado para 4 colunas em ecrãs grandes -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+                    <!-- Benefício 1 -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg border-t-4 border-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-primary mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                        <h3 class="text-xl font-bold text-text-dark mb-2">+10.000 Figurinhas Prontas</h3>
+                        <p class="text-text-light">Organizadas e prontas para copiar e colar nos seus stories.</p>
+                    </div>
+                    <!-- Benefício 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg border-t-4 border-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-primary mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.486H7.343v-2.343z" /></svg>
+                        <h3 class="text-xl font-bold text-text-dark mb-2">+50 Nichos Diferentes</h3>
+                        <p class="text-text-light">Encontre a figurinha perfeita para o seu negócio ou perfil.</p>
+                    </div>
+                    <!-- Benefício 3 -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg border-t-4 border-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-primary mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        <h3 class="text-xl font-bold text-text-dark mb-2">Acesso Vitalício</h3>
+                        <p class="text-text-light">Pague uma vez e receba todas as futuras atualizações de graça.</p>
+                    </div>
+                    <!-- Benefício 4 (NOVO) -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg border-t-4 border-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-primary mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m-15.357-2a8.001 8.001 0 0015.357 2m0 0H15" />
+                        </svg>
+                        <h3 class="text-xl font-bold text-text-dark mb-2">Atualizações Periódicas</h3>
+                        <p class="text-text-light">Novas figurinhas e bónus são adicionados sem custo extra.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. BONUS SECTION -->
+        <section id="bonus" class="bg-primary-light py-12 md:py-16">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-3xl md:text-4xl font-bold text-text-dark mb-4">
                     Compre Hoje e Receba +R$59,97 em Bónus!
@@ -7,26 +228,25 @@
                     Ao garantir seu acesso hoje, você também recebe 3 packs de bónus incríveis (de graça!):
                 </p>
                 <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto text-left">
+                    <!-- Bónus 1 -->
                     <div class="bg-white p-4 rounded-lg shadow-lg">
                         <span class="text-2xl" role="img" aria-label="art palette">🎨</span>
                         <h3 class="text-lg font-bold text-text-dark mt-2 mb-1">+12.000 Posts Canva</h3>
                         <p class="text-text-light text-sm mb-2">Artes 100% editáveis para o seu feed.</p>
                         <span class="font-bold text-base"><span class="line-through text-gray-400">R$29,99</span> <span class="text-primary ml-1">R$0,00</span></span>
                     </div>
+                    <!-- Bónus 2 -->
                     <div class="bg-white p-4 rounded-lg shadow-lg">
                         <span class="text-2xl" role="img" aria-label="juice">🍹</span>
                         <h3 class="text-lg font-bold text-text-dark mt-2 mb-1">Ebook 100 Sucos Detox</h3>
                         <p class="text-text-light text-sm mb-2">Receitas práticas para uma vida mais saudável.</p>
                         <span class="font-bold text-base"><span class="line-through text-gray-400">R$19,99</span> <span class="text-primary ml-1">R$0,00</span></span>
                     </div>
+                    <!-- Bónus 3 -->
                     <div class="bg-white p-4 rounded-lg shadow-lg">
                         <span class="text-2xl" role="img" aria-label="envelope">💌</span>
                         <h3 class="text-lg font-bold text-text-dark mt-2 mb-1">Pack Convites Lucrativos</h3>
-                        <p class="text-text-light text-sm mb-2">Modelos editáveis para criar convites.</p>
-                        <span class="font-bold text-base"><span class="line-through text-gray-400">R$9,99</span> <span class="text-primary ml-1">R$0,00</span></span>
-                    </div>
-                </div>
-            </div>
-        </section>
+                        <p class="text-text-light text-sm mb-2">Modelos editáveis para criar convites.</
 
-        ```eof
+
+ 
