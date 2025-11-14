@@ -1,291 +1,220 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beatriz Lira - Digital</title>
-    <!-- Favicon atualizado -->
-    <link rel="icon" href="https://i.imgur.com/RZR1gMI.png" type="image/png">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Adicionando a nova fonte -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&family=Great+Vibes&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(45deg, #405DE6, #833AB4, #E1306C, #F77737);
-            background-attachment: fixed;
-            color: white;
-        }
-        
-        /* Classe para a nova fonte */
-        .title-font {
-            font-family: 'Great Vibes', cursive;
-        }
-        
-        /* Efeito neon aprimorado para a fonte do título */
-        .title-font.neon-text {
-            text-shadow:
-                0 0 2px rgba(255, 255, 255, 0.7), /* Brilho branco interno para nitidez */
-                0 0 5px rgba(236, 72, 153, 0.8),
-                0 0 10px rgba(236, 72, 153, 0.8),
-                0 0 20px rgba(236, 72, 153, 0.8),
-                0 0 40px rgba(236, 72, 153, 0.6),
-                0 0 80px rgba(236, 72, 153, 0.6);
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pack Beatriz Lira</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-        .neon-text {
-            text-shadow:
-                0 0 5px rgba(236, 72, 153, 0.8),
-                0 0 10px rgba(236, 72, 153, 0.8),
-                0 0 20px rgba(236, 72, 153, 0.8),
-                0 0 40px rgba(236, 72, 153, 0.6),
-                0 0 80px rgba(236, 72, 153, 0.6);
-        }
+<style>
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: #F8F8F8;
+        color: #000;
+        line-height: 1.6;
+    }
 
-        .neon-button {
-            border-radius: 0.5rem;
-            transition: all 0.3s ease;
-            animation: pulse-green 2s infinite;
-        }
+    header {
+        text-align: center;
+        padding: 30px 20px;
+    }
 
-        .neon-button-green {
-            background-color: #34D399;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.4), 0 0 5px #34D399, 0 0 15px #34D399, 0 0 30px #34D399;
-        }
-        .neon-button-green:hover {
-            animation-play-state: paused;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.5), 0 0 10px #34D399, 0 0 30px #34D399, 0 0 60px #34D399;
-            transform: translateY(-2px) scale(1.05);
-        }
-        
-        @keyframes pulse-green {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
+    header img {
+        width: 120px;
+    }
 
-        .neon-box {
-            border: 2px solid #ec4899;
-            box-shadow: 0 0 10px rgba(236, 72, 153, 0.6);
-        }
+    h1 {
+        font-size: 32px;
+        font-weight: 600;
+        text-align: center;
+        margin: 10px 20px;
+    }
 
-        /* Carrossel de Imagens */
-        .carousel-item {
-            width: 200px;
-            height: auto;
-            border-radius: 0.75rem;
-            overflow: hidden;
-            border: 2px solid #ec4899;
-            box-shadow: 0 0 10px rgba(236, 72, 153, 0.5);
-        }
-        .carousel-container {
-            -webkit-mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
-            mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
-        }
-        .carousel-track {
-            animation: scroll-horizontal 40s linear infinite;
-        }
-        .carousel-track:hover {
-            animation-play-state: paused;
-        }
-        
-        @keyframes scroll-horizontal {
-            from { transform: translateX(0); }
-            to { transform: translateX(calc(-1 * (200px + 1rem) * 7)); }
-        }
+    p.sub {
+        font-size: 17px;
+        text-align: center;
+        max-width: 600px;
+        margin: 10px auto 30px auto;
+        opacity: 0.8;
+    }
 
-        /* Notificação Popup */
-        #notification-popup {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            max-width: calc(100vw - 40px);
-            background-color: rgba(20, 20, 20, 0.9);
-            color: white;
-            padding: 12px 18px;
-            border-radius: 8px;
-            border-left: 5px solid #ec4899;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            font-size: 14px;
-            z-index: 1000;
-            transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-            transform: translateX(calc(100% + 40px));
-            opacity: 0;
-            visibility: hidden;
-        }
-        #notification-popup.show {
-            transform: translateX(0);
-            opacity: 1;
-            visibility: visible;
-        }
+    .btn {
+        display: inline-block;
+        background: #1A73E8;
+        color: #fff;
+        padding: 15px 28px;
+        font-size: 18px;
+        font-weight: 600;
+        border-radius: 10px;
+        text-decoration: none;
+        margin-top: 10px;
+    }
 
-        /* Mockup Celular */
-        .mockup-container {
-            position: relative;
-            flex-shrink: 0;
-        }
-        .phone-mockup {
-            position: absolute;
-            width: 100px; height: 200px;
-            background: #111;
-            border-radius: 18px; border: 5px solid #f0f0f0;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-            display: flex; justify-content: center; align-items: center;
-            overflow: hidden;
-        }
-        .phone-mockup::before {
-            content: ''; position: absolute; top: 6px;
-            width: 40%; height: 8px;
-            background: #111; border-radius: 6px; z-index: 2;
-        }
-        .phone-screen { width: 100%; height: 100%; overflow: hidden; }
-        .phone-screen img { width: 100%; height: 100%; object-fit: cover; }
-        .phone-1 { top: 0; left: 50%; transform: translateX(-70%) rotate(-10deg); z-index: 1; }
-        .phone-2 { bottom: 0; left: 50%; transform: translateX(-30%) rotate(10deg); z-index: 2; }
+    .section {
+        padding: 50px 20px;
+        text-align: center;
+        max-width: 900px;
+        margin: auto;
+    }
 
-        .telegram-blue { color: #2AABEE; }
-    </style>
+    .box-container {
+        display: grid;
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .box {
+        background: #fff;
+        border: 1px solid #E6E6E6;
+        padding: 25px;
+        border-radius: 14px;
+    }
+
+    .mockup {
+        width: 100%;
+        max-width: 340px;
+        border-radius: 18px;
+        margin: 25px auto;
+        display: block;
+    }
+
+    .price-box {
+        background: #fff;
+        border: 1px solid #E6E6E6;
+        padding: 40px;
+        border-radius: 16px;
+        text-align: center;
+        max-width: 500px;
+        margin: auto;
+    }
+
+    .old-price {
+        text-decoration: line-through;
+        opacity: 0.5;
+        font-size: 18px;
+    }
+
+    .new-price {
+        font-size: 38px;
+        font-weight: 700;
+        margin: 10px 0;
+    }
+
+    .testimonial {
+        background: #fff;
+        padding: 20px;
+        border-radius: 14px;
+        border: 1px solid #E6E6E6;
+        margin-bottom: 20px;
+    }
+
+    footer {
+        text-align: center;
+        padding: 40px 20px;
+        font-size: 14px;
+        opacity: 0.7;
+    }
+
+    @media (min-width: 700px) {
+        .box-container {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+</style>
 </head>
-<body class="bg-gray-900">
 
-    <div class="container mx-auto px-6 py-12 max-w-5xl text-center">
+<body>
 
-        <!-- Topo -->
-        <header class="mb-16 md:mb-24 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
-            <!-- Mockup Celulares -->
-            <div class="mockup-container w-[200px] h-[240px]">
-                <div class="phone-mockup phone-1"><div class="phone-screen"><img src="https://i.imgur.com/8BpUGAA.jpeg" alt="Exemplo de figurinha no celular"></div></div>
-                <div class="phone-mockup phone-2"><div class="phone-screen"><img src="https://i.imgur.com/Ext3yXR.png" alt="Exemplo de figurinha no celular"></div></div>
-            </div>
+<header>
+    <img src="https://imgur.com/rnXvAUo.png" alt="Logo Pack Beatriz Lira">
+</header>
 
-            <!-- Conteúdo do Topo -->
-            <div class="text-center md:text-left">
-                <!-- Título com tamanho ajustado -->
-                <h1 class="title-font text-5xl lg:text-6xl neon-text mb-4">Beatriz Lira - Digital</h1>
-                <p class="title-font text-3xl lg:text-4xl text-gray-200 mb-6">A solução completa para stories incríveis e profissionais.</p>
-                <div class="bg-black/30 border-2 border-pink-500 inline-block p-4 rounded-lg shadow-[0_0_15px_rgba(236,72,153,0.8)] mb-4">
-                    <p class="text-3xl md:text-4xl font-bold text-pink-400">Apenas R$10,00</p>
-                    <p class="flex items-center justify-center gap-2 mt-2">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 telegram-blue" viewBox="0 0 24 24" fill="currentColor"><path d="M9.78 18.65l.28-4.23l7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3L3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.57c-.28 1.13-1.04 1.4-1.74 .88l-4.98-3.9z"></path></svg>
-                        <span class="telegram-blue font-semibold">acesso vitalício no Telegram</span>
-                    </p>
-                </div>
-                <div class="mt-8 flex flex-col items-center md:items-start">
-                    <a href="https://www.ggcheckout.com/checkout/v2/Z3VzGlDvIPiJP30xwlyb" class="neon-button neon-button-green inline-flex items-center justify-center text-lg md:text-xl px-8 py-4 uppercase font-bold tracking-wider">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                        Quero meu pack agora
-                    </a>
-                    <div class="countdown-timer bg-gray-900/50 p-2 rounded-lg inline-flex items-center justify-center gap-3 text-center mt-4">
-                        <p class="text-sm font-semibold text-pink-400">A OFERTA TERMINA EM:</p>
-                        <div><span class="minutes font-bold text-lg bg-black/50 px-2 py-1 rounded">01</span><span class="text-xs block">Min</span></div>
-                        <div><span class="seconds font-bold text-lg bg-black/50 px-2 py-1 rounded">59</span><span class="text-xs block">Seg</span></div>
-                    </div>
-                </div>
-            </div>
-        </header>
+<!-- HERO -->
+<section class="section">
+    <h1>O pack definitivo para deixar seus stories lindos, profissionais e com mais alcance.</h1>
+    <p class="sub">
+        Templates prontos em 3 estilos — estético, motivacional e comercial — feitos para postar em segundos e transformar a estética do seu perfil.
+    </p>
+    <a class="btn" href="https://www.ggcheckout.com/checkout/v2/Z3VzGlDvIPiJP30xwlyb">Baixar o Pack Beatriz Lira</a>
 
-        <!-- Seção de Benefícios -->
-        <section class="mb-16 md:mb-24">
-            <h2 class="text-3xl font-bold uppercase neon-text mb-10">Tudo que você precisa para stories incríveis</h2>
-            <div class="max-w-md mx-auto text-left space-y-4">
-                <div class="flex items-center bg-gray-900/50 p-4 rounded-lg neon-box"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-400 flex-shrink-0 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg><span class="text-lg">+10.000 <strong>Figurinhas Prontas</strong></span></div>
-                <div class="flex items-center bg-gray-900/50 p-4 rounded-lg neon-box"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-400 flex-shrink-0 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg><span class="text-lg">+50 <strong>Nichos Diferentes</strong></span></div>
-                <div class="flex items-center bg-gray-900/50 p-4 rounded-lg neon-box"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-400 flex-shrink-0 mr-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg><span class="text-lg">Acesso <strong>vitalício</strong> por apenas R$10,00</span></div>
-            </div>
-        </section>
+    <img class="mockup" src="https://imgur.com/UDv5nGr.png" alt="Mockup Hero">
+</section>
 
-        <!-- Carrossel de Imagens e Imagens Adicionais -->
-        <section class="mb-16 md:mb-24">
-            <h2 class="text-3xl font-bold uppercase neon-text mb-10">Veja um Pouco do Pack</h2>
-            <div class="carousel-container w-full overflow-hidden mb-8">
-                <div class="carousel-track"><div class="flex gap-4">
-                    <div class="carousel-item flex-shrink-0"><img src="https://i.imgur.com/8BpUGAA.jpeg" alt="Exemplo 1"></div>
-                    <div class="carousel-item flex-shrink-0"><img src="https://i.imgur.com/MxgScBQ.jpeg" alt="Exemplo 2"></div>
-                    <div class="carousel-item flex-shrink-0"><img src="https://i.imgur.com/Z7rWuFW.jpeg" alt="Exemplo 3"></div>
-                    <div class="carousel-item flex-shrink-0"><img src="https://i.imgur.com/u5QJd8b.jpeg" alt="Exemplo 4"></div>
-                    <div class="carousel-item flex-shrink-0"><img src="https://i.imgur.com/DXWiVSW.jpeg" alt="Exemplo 5"></div>
-                    <div class="carousel-item flex-shrink-0"><img src="https://i.imgur.com/Zoo8jQz.jpeg" alt="Exemplo 6"></div>
-                    <div class="carousel-item flex-shrink-0"><img src="https://i.imgur.com/vDhc4me.jpeg" alt="Exemplo 7"></div>
-                    <div class="carousel-item flex-shrink-0"><img src="https://i.imgur.com/8BpUGAA.jpeg" alt="Exemplo 1"></div>
-                    <div class="carousel-item flex-shrink-0"><img src="https://i.imgur.com/MxgScBQ.jpeg" alt="Exemplo 2"></div>
-                    <div class="carousel-item flex-shrink-0"><img src="https://i.imgur.com/Z7rWuFW.jpeg" alt="Exemplo 3"></div>
-                    <div class="carousel-item flex-shrink-0"><img src="https://i.imgur.com/u5QJd8b.jpeg" alt="Exemplo 4"></div>
-                    <div class="carousel-item flex-shrink-0"><img src="https://i.imgur.com/DXWiVSW.jpeg" alt="Exemplo 5"></div>
-                    <div class="carousel-item flex-shrink-0"><img src="https://i.imgur.com/Zoo8jQz.jpeg" alt="Exemplo 6"></div>
-                    <div class="carousel-item flex-shrink-0"><img src="https://i.imgur.com/vDhc4me.jpeg" alt="Exemplo 7"></div>
-                </div></div>
-            </div>
-        </section>
+<!-- O QUE TEM NO PACK -->
+<section class="section">
+    <h2>O que tem dentro do pack?</h2>
 
-        <!-- CTA Final -->
-        <footer class="mt-12 border-t-2 border-pink-500/30 pt-12">
-            <p class="text-2xl md:text-3xl font-bold uppercase mb-6 neon-text">O pack mais completo do Brasil, por só R$10,00.</p>
-            <div class="flex flex-col items-center">
-                <a href="https://www.ggcheckout.com/checkout/v2/Z3VzGlDvIPiJP30xwlyb" class="neon-button neon-button-green inline-flex items-center justify-center text-lg md:text-xl px-8 py-4 uppercase font-bold tracking-wider">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
-                    Quero meu pack agora
-                </a>
-                <div class="countdown-timer bg-gray-900/50 p-2 rounded-lg inline-flex items-center justify-center gap-3 text-center mt-4">
-                    <p class="text-sm font-semibold text-pink-400">A OFERTA TERMINA EM:</p>
-                    <div><span class="minutes font-bold text-lg bg-black/50 px-2 py-1 rounded">01</span><span class="text-xs block">Min</span></div>
-                    <div><span class="seconds font-bold text-lg bg-black/50 px-2 py-1 rounded">59</span><span class="text-xs block">Seg</span></div>
-                </div>
-            </div>
-        </footer>
-
-        <!-- Selos de Segurança e Copyright -->
-        <div class="mt-16 text-center">
-            <div class="flex flex-wrap justify-center items-center gap-4">
-                <img src="https://www.siteconfiavel.com.br/assets/img/logo.svg" alt="Selo Site Confiável" class="h-12">
-                <img src="https://i.imgur.com/5ICgnoX.png" alt="Selo Compra Segura" class="h-12">
-            </div>
-            <p class="mt-8 text-gray-400 text-sm">© 2025 Beatriz Lira - Digital. Todos os direitos reservados.</p>
-        </div>
+    <div class="box-container">
+        <div class="box"><h3>🩶 Estético</h3><p>Layouts clean, modernos e prontos para elevar sua estética.</p></div>
+        <div class="box"><h3>✨ Motivacional</h3><p>Frases femininas, fortes e prontas para engajar.</p></div>
+        <div class="box"><h3>🛍 Comercial</h3><p>Templates para promoções, produtos e catálogos.</p></div>
     </div>
+</section>
 
-    <!-- Notificação Popup -->
-    <div id="notification-popup"></div>
+<!-- MOCKUPS -->
+<section class="section">
+    <img class="mockup" src="https://imgur.com/ikEgEhQ.png" alt="Mockup 1">
+    <img class="mockup" src="https://imgur.com/WE9euWt.png" alt="Mockup 2">
+    <img class="mockup" src="https://imgur.com/nA1hhyX.png" alt="Mockup 3">
+</section>
 
-    <script>
-        const names = ["Helena", "Alice", "Cecília", "Maitê", "Laura", "Isabella", "Sophia", "Aurora", "Ayla", "Heloísa", "Eloá", "Luísa", "Manuela", "Liz", "Antonella", "Ísis", "Luna", "Elisa", "Maya", "Esther", "Júlia", "Melissa", "Lívia", "Isadora", "Olívia", "Sarah", "Valentina", "Rebeca", "Lorena", "Catarina", "Lavínia", "Giovanna", "Mariana", "Jade"];
-        let currentNameIndex = 0;
-        function showNotification() {
-            const popup = document.getElementById('notification-popup');
-            popup.innerHTML = `<strong>${names[currentNameIndex]}</strong> acabou de entrar no grupo!`;
-            popup.classList.add('show');
-            currentNameIndex = (currentNameIndex + 1) % names.length;
-            setTimeout(() => { popup.classList.remove('show'); }, 4000);
-        }
-        setTimeout(() => { showNotification(); setInterval(showNotification, 6000); }, 3000);
+<!-- BENEFICIOS -->
+<section class="section">
+    <h2>Por que esse pack funciona tão bem?</h2>
 
-        const countdownElements = document.querySelectorAll('.countdown-timer');
-        if (countdownElements.length > 0) {
-            const endTime = new Date().getTime() + (1 * 60 * 1000) + (59 * 1000);
-            const countdown = () => {
-                const now = new Date().getTime();
-                const gap = endTime - now;
-                const minutes = Math.floor(gap / (1000 * 60));
-                const seconds = Math.floor((gap % (1000 * 60)) / 1000);
-                const minutesText = minutes < 10 ? '0' + minutes : minutes;
-                const secondsText = seconds < 10 ? '0' + seconds : seconds;
+    <div class="box-container" style="grid-template-columns: 1fr;">
+        <div class="box"><p>• Você posta em segundos</p></div>
+        <div class="box"><p>• Stories instantaneamente mais bonitos</p></div>
+        <div class="box"><p>• Gera mais views e seguidores</p></div>
+        <div class="box"><p>• Estética de alto nível sem edição</p></div>
+        <div class="box"><p>• Acesso vitalício + atualizações</p></div>
+    </div>
+</section>
 
-                countdownElements.forEach(timer => {
-                    if (gap < 0) {
-                        timer.querySelector('.minutes').innerText = '00';
-                        timer.querySelector('.seconds').innerText = '00';
-                    } else {
-                        timer.querySelector('.minutes').innerText = minutesText;
-                        timer.querySelector('.seconds').innerText = secondsText;
-                    }
-                });
-                if (gap < 0) clearInterval(timerInterval);
-            };
-            const timerInterval = setInterval(countdown, 1000);
-            countdown();
-        }
-    </script>
-    <script src="/_vercel/insights/script.js"></script>
+<!-- BONUS -->
+<section class="section">
+    <h2>Bônus exclusivo incluso</h2>
+
+    <div class="box">
+        ✔ 50 stories extras neutros <br>
+        ✔ Paleta premium <br>
+        ✔ Pack de fontes <br>
+        ✔ Mini-guia “Como viralizar stories”
+    </div>
+</section>
+
+<!-- PREÇO -->
+<section class="section">
+    <div class="price-box">
+        <div class="old-price">De R$ 49,90</div>
+        <div class="new-price">Por R$ 5,99</div>
+
+        <a class="btn" href="https://www.ggcheckout.com/checkout/v2/Z3VzGlDvIPiJP30xwlyb">Quero baixar agora</a>
+    </div>
+</section>
+
+<!-- Testemunhos -->
+<section class="section">
+    <h2>O que estão dizendo?</h2>
+
+    <div class="testimonial">“Finalmente meus stories ficaram bonitos.”</div>
+    <div class="testimonial">“Uso todo dia, vale muito mais do que paguei.”</div>
+    <div class="testimonial">“Estética perfeita! Recomendo muito.”</div>
+</section>
+
+<!-- SOBRE -->
+<section class="section">
+    <h2>Quem criou?</h2>
+    <p>
+        Eu sou Beatriz Lira, designer e criadora de conteúdo.  
+        Desenvolvi esse pack para ajudar você a transformar seus stories com estética profissional — mesmo sem saber editar.
+    </p>
+</section>
+
+<footer>
+    Pack Beatriz Lira © 2025 — Todos os direitos reservados.
+</footer>
+
 </body>
 </html>
-
